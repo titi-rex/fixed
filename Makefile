@@ -6,7 +6,7 @@
 #    By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 20:46:19 by tlegrand          #+#    #+#              #
-#    Updated: 2023/09/18 22:55:08 by tlegrand         ###   ########.fr        #
+#    Updated: 2023/09/19 22:24:17 by tlegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ MAKE		=	make -s
 
 
 #	==============================	FLAGS	==============================	#
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra #-Werror
 DFLAGS		=	-g3 -fsanitize=address -fsanitize=leak -fsanitize=pointer-subtract -fsanitize=pointer-compare -fsanitize=undefined 
 
 
@@ -68,7 +68,7 @@ re		:	fclean
 
 #	==============================	COMPILATION	==============================	#
 ${NAME}			:	${DIR_OBJS} ${OBJS}
-				@${CC} -I${DIR_HEADER} ${CFLAGS} ${OBJS} -o ${NAME} 
+				@${CC} -I${DIR_HEADER} ${CFLAGS} ${OBJS} libft.a -o ${NAME} 
 				@printf "$(GREEN_LIGHT)$@ created !\n$(END)"
 
 
