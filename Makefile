@@ -6,7 +6,7 @@
 #    By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 20:46:19 by tlegrand          #+#    #+#              #
-#    Updated: 2023/09/21 22:59:45 by tlegrand         ###   ########.fr        #
+#    Updated: 2023/09/22 21:40:52 by tlegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME		=	fixed
 
 #	==============================	SOURCES	==============================	#
 DIR_SRCS	=	srcs/
-LST_SRCS	=	main.c print.c
+LST_SRCS	=	main.c print.c calcul.c
 SRCS		=	${addprefix ${DIR_SRCS}, ${LST_SRCS}}
 
 

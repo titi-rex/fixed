@@ -6,7 +6,7 @@
 /*   By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 22:58:26 by tlegrand          #+#    #+#             */
-/*   Updated: 2023/09/21 22:58:45 by tlegrand         ###   ########.fr       */
+/*   Updated: 2023/09/22 22:00:47 by tlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,9 @@ void	print_fixed(int32_t raw)
 	ft_bzero(buf, sizeof(buf));
 	res = get_frac(raw, &idx);
 	len = len_num(res);
+	ft_putnbr_fd(FIXED_TO_INT(raw), 1);
+	if (len == 0)
+		return ;
 	j = 0;
 	buf[0] = '.';
 	while (++j < (idx - len - 1))
@@ -103,6 +106,5 @@ void	print_fixed(int32_t raw)
 		res /= 10;
 		--idx;
 	}
-	ft_putnbr_fd(FIXED_TO_INT(raw), 1);
 	ft_putstr_fd(buf, 1);
 }

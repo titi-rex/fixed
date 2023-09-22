@@ -6,7 +6,7 @@
 /*   By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 22:54:09 by tlegrand          #+#    #+#             */
-/*   Updated: 2023/09/21 23:15:19 by tlegrand         ###   ########.fr       */
+/*   Updated: 2023/09/22 22:48:55 by tlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,22 @@ int	main(void)
 	int32_t			f1;
 	int32_t			f2;
 	int32_t			f3;
+	uint64_t		tmp;
 
-
-	f1 = FLOAT_TO_FIXED(1.75f);
-	f2 = FLOAT_TO_FIXED(5.5f);
+	f1 = FLOAT_TO_FIXED(-.5f);
+	f2 = FLOAT_TO_FIXED(5.79f);
 
 	mprintf("f1 ", f1);
 	mprintf("f2 ", f2);
 	
+	// ft_printf("f111 %#32.32b\n", f1);
+	f3 = fx_sin(f1);
+	// ft_printf("mask %#32.32b\n", 0b11111111111111111111111100000000);
+	// ft_printf("pow %#32.32b\n", f3);
+
+	mprintf("sin ", f3);
+
+	return (0);
 	f3 = FX_ADD(f1, f2);
 	mprintf("sum ", f3);
 
